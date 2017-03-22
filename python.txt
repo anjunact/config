@@ -1,0 +1,6 @@
+https://github.com/pyenv/pyenv/wiki
+
+.pip/pip.conf
+[global]
+trusted-host = mirrors.aliyun.com  
+index-url = http://mirrors.aliyun.com/pypi/simple/
