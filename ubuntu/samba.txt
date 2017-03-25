@@ -1,15 +1,13 @@
 apt-get -y install samba 
 
-chmod 777 /home/share 
+smbpasswd -a anjun
+
 vi /etc/samba/smb.conf
 unix charset = UTF-8
 interfaces = 127.0.0.0/8 10.0.0.0/24
-map to guest = Bad User
-[Share]# any name you like
-   path = /home/share# shared directory
-   writable = yes# writable
-   guest ok = yes# guest OK
-   guest only = yes# guest only
-   create mode = 0777# fully accessed
-   directory mode = 0777# fully accessed
+[Share]
+   path = /home/share
+   writable = yes
+   create mode = 0777
+   directory mode = 0777
    share modes = yes
