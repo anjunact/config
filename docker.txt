@@ -1,3 +1,17 @@
 https://github.com/search?utf8=%E2%9C%93&q=in%3Apath+docker-compose-prod.yml+extension%3Ayml&type=Code&ref=searchresults
 
 https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/
+
+安装docker
+curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet | sh -
+curl -sSL https://get.daocloud.io/docker | sh
+https://mirror.tuna.tsinghua.edu.cn/help/docker/
+
+jenkens
+docker run --name  myjenkins -p 18080:8080 -p 50000:50000 -v /var/jenkins_home jenkins
+
+
+docker top xxx
+docker exec xxx command
+docker search xxx
+RUN  sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
