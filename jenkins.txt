@@ -1,0 +1,12 @@
+http://mirrors.jenkins-ci.org/war-stable/latest/jenkins.war
+java -jar ./jenkins.war --httpPort=8080
+http://localhost:8080/jenkins/restart  重启
+
+
+
+plugins
+http://updates.jenkins-ci.org/download/plugins/
+http://updates.jenkins-ci.org/latest/publish-over-ssh.hpi
+
+参考
+http://blog.csdn.net/evankaka/article/details/50518959

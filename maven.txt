@@ -4,3 +4,5 @@
       <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
       <mirrorOf>central</mirrorOf>        
 </mirror>
+
+mvn archetype:generate -DgroupId=cc.anjun -DartifactId=webapp -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false

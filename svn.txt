@@ -1,0 +1,16 @@
+svnserve create /data/svn/repos
+/data/svn/repos/conf/svnserve.conf
+anon-access=read
+auth-access=write
+password-db=passwd
+authz-db=authz
+
+/data/svn/repos/conf/passwd
+[users]
+username=passwd
+/data/svn/repos/conf/authz
+[groups]
+dev=username
+[/]
+@dev=rw
+svnserve -d -r /data/svn
