@@ -1,0 +1,25 @@
+brew install dnsmasq
+
+echo 'address=/.dev/127.0.0.1' > $(brew --prefix)/etc/dnsmasq.conf
+sudo cp -v $(brew --prefix dnsmasq)/homebrew.mxcl.dnsmasq.plist /Library/LaunchDaemons
+sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
+sudo mkdir -v /etc/resolver
+sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/dev'
+suutil --dns 查看dns解析
+
+
+echo 'address=/.dev/127.0.0.1' > $(brew --prefix)/etc/dnsmasq.conf
+echo 'no-resolv' > $(brew --prefix)/etc/dnsmasq.conf
+echo 'strict-order' > $(brew --prefix)/etc/dnsmasq.conf
+echo 'server=208.67.222.222#5353' > $(brew --prefix)/etc/dnsmasq.conf
+echo 'listen-address=127.0.0.1,192.168.x.x' > $(brew --prefix)/etc/dnsmasq.conf
+
+sudo cp -v $(brew --prefix dnsmasq)/homebrew.mxcl.dnsmasq.plist /Library/LaunchDaemons
+sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
+sudo mkdir -v /etc/resolver
+sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/dev'
+
+System Preferences > Network > Wi-Fi (or whatever you use) > Advanced… > DNS > add 127.0.0.1 to top of the list.
+
+sudo launchctl unload homebrew.mxcl.dnsmasq.plist && sudo launchctl load homebrew.mxcl.dnsmasq.plist
+sudo launchctl start homebrew.mxcl.dnsmasq

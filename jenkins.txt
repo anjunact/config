@@ -6,6 +6,8 @@ http://localhost:8080/jenkins/restart  重启
 
 plugins
 http://updates.jenkins-ci.org/download/plugins/
+https://mirrors.tuna.tsinghua.edu.cn/jenkins/plugins/
+http://updates.jenkins-ci.org/latest/maven-plugin.hpi
 http://updates.jenkins-ci.org/latest/publish-over-ssh.hpi
 
 参考
