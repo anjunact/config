@@ -1,2 +1,3 @@
 https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box
+http://cloud.centos.org/centos/7/vagrant/x86_64/images/CentOS-7-x86_64-Vagrant-1702_01.VirtualBox.box
 vagrant box add --name ubuntu16 xenial-server-cloudimg-amd64-vagrant.box
